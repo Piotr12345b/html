@@ -1,0 +1,51 @@
+
+html {
+    background: none repeat scroll 0 0 #eeeeee;
+}
+body {
+    background: none repeat scroll 0 0 #cecece;
+    border: 2px solid #dedede;
+    font-size: 14px;
+    margin: 10px auto;
+    padding: 10px;
+    width: 980px;
+}
+div#MAIN {
+    background: none repeat scroll 0 0 #efefef;
+    float: left;
+    margin: 5px 0;
+    padding: 10px;
+    width: 660px;
+}
+div#SIDEBAR {
+    background: none repeat scroll 0 0 #eeeeee;
+    float: right;
+    margin: 5px 0 5px 10px;
+    padding: 10px;
+    width: 270px;
+}
+footer {
+    background: none repeat scroll 0 0 #dedede;
+    clear: both;
+    margin-top: 5px;
+    padding: 10px;
+}
+h1 {
+    font: normal 18px Helvetica;
+    color: #213698;
+}
+div.widget {
+    background: #dadada;
+    border: 1px solid #ccc;
+    padding: 5px;
+    margin-top: 10px;
+    border-radius: 5px;
+}
+div.widget h1 {
+    margin: 3px 0px 0px 0px;
+    text-align: center;
+}
+div.widget p {
+    margin: 3px;
+}
+
