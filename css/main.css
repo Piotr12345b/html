@@ -10,14 +10,14 @@ body {
     padding: 10px;
     width: 980px;
 }
-div#MAIN {
+div#main {
     background: none repeat scroll 0 0 #efefef;
     float: left;
     margin: 5px 0;
     padding: 10px;
     width: 660px;
 }
-div#SIDEBAR {
+div#sidebar {
     background: none repeat scroll 0 0 #eeeeee;
     float: right;
     margin: 5px 0 5px 10px;
