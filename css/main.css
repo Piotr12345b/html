@@ -1,4 +1,7 @@
-
+*{
+    margin: 0;
+    padding: 0;
+}
 html {
     background: none repeat scroll 0 0 #eeeeee;
 }
@@ -9,6 +12,15 @@ body {
     margin: 10px auto;
     padding: 10px;
     width: 980px;
+}
+header#naglowek{
+    background-color: #eb7b0b;
+    height:200px;
+    margin-bottom: 5px;
+}
+nav#menu{
+    height:50px;
+    background-color: #eb0b2b;
 }
 div#main {
     background: none repeat scroll 0 0 #efefef;
@@ -24,11 +36,28 @@ div#sidebar {
     padding: 10px;
     width: 270px;
 }
-footer {
+footer#stopka{
     background: none repeat scroll 0 0 #dedede;
     clear: both;
     margin-top: 5px;
     padding: 10px;
+}
+#stopka > div{
+    background: #3bd268;
+    width: 300px;
+    margin-right:11px;
+    display: inline-block;
+    padding: 5px;
+}
+#stopka #right{
+    margin: 0;  
+}
+#stopka #bottom{
+    display: block;
+    width: 950px;
+    margin-top: 5px;
+    margin-right: 0;
+    text-align: right;
 }
 h1 {
     font: normal 18px Helvetica;
@@ -47,5 +76,8 @@ div.widget h1 {
 }
 div.widget p {
     margin: 3px;
+}
+#main p{
+    margin-top: 1em;
 }
 
