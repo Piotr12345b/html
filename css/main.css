@@ -2,14 +2,44 @@
     margin: 0;
     padding: 0;
 }
+p{
+    margin-top: 1em;
+}
+a {
+    text-decoration: none;
+    color: #213698;
+}
+a:hover{
+    text-decoration: underline;
+    color: #3bd268;
+}
+a:active{
+    text-decoration: none;
+    color: #3bd268;
+}
+blockquote{
+    padding: 1em;
+    color: #444;
+}
+cite{
+    font-style: italic;
+    margin-top: 1em;
+    display:inline-block;
+}
+q{
+    color:#444;
+    margin-top: 1em;
+    display:inline-block;
+}
 html {
     background: none repeat scroll 0 0 #eeeeee;
 }
 body {
     background: none repeat scroll 0 0 #cecece;
     border: 2px solid #dedede;
+    border-top:none;
     font-size: 14px;
-    margin: 10px auto;
+    margin: 0 auto 10px;
     padding: 10px;
     width: 980px;
 }
@@ -17,10 +47,39 @@ header#naglowek{
     background-color: #eb7b0b;
     height:200px;
     margin-bottom: 5px;
+    position: relative;
 }
 nav#menu{
     height:50px;
     background-color: #eb0b2b;
+}
+nav ul{
+    display: block;
+    list-style: none;
+   // overflow: hidden;
+}
+nav ul li{
+    float: left;
+    display: block;
+    padding:15px 10px;
+    border-left: 1px solid black;
+    font:bold 14px Georgia,sans-serif;
+    height: 20px;
+    position: relative;
+}
+nav ul li ul{
+    display:block;
+    list-style: none;
+    position: absolute;
+    top:50px;
+    left:-1px;
+}
+nav ul li ul li{
+    display:block;
+    float: none;
+    background-color: yellow;
+   // height: 30px;
+    white-space: nowrap;
 }
 div#main {
     background: none repeat scroll 0 0 #efefef;
@@ -33,8 +92,9 @@ div#sidebar {
     background: none repeat scroll 0 0 #eeeeee;
     float: right;
     margin: 5px 0 5px 10px;
-    padding: 10px;
+    padding: 0px 10px 10px 10px;
     width: 270px;
+    clear: both;
 }
 footer#stopka{
     background: none repeat scroll 0 0 #dedede;
@@ -42,22 +102,26 @@ footer#stopka{
     margin-top: 5px;
     padding: 10px;
 }
-#stopka > div{
+#stopka #left, #stopka #center, #stopka #right {
     background: #3bd268;
-    width: 300px;
-    margin-right:11px;
-    display: inline-block;
-    padding: 5px;
+    width: 290px;
+    margin-right:15px;
+    margin-bottom: 5px;
+    display: block;
+    padding: 10px;
+    float: left;
 }
 #stopka #right{
     margin: 0;  
 }
 #stopka #bottom{
+    background: #3bd268;
     display: block;
-    width: 950px;
-    margin-top: 5px;
+    width: 940px;
     margin-right: 0;
     text-align: right;
+    padding: 10px;
+    clear: both;
 }
 h1 {
     font: normal 18px Helvetica;
@@ -68,6 +132,8 @@ div.widget {
     border: 1px solid #ccc;
     padding: 5px;
     margin-top: 10px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
     border-radius: 5px;
 }
 div.widget h1 {
@@ -76,8 +142,21 @@ div.widget h1 {
 }
 div.widget p {
     margin: 3px;
-}
-#main p{
     margin-top: 1em;
 }
-
+div#social{
+    position: absolute;
+    height: 40px;
+    top:10px;
+    right:10px;
+    background: #dce12f;
+}
+div.shearch-box{
+    height: 25px;
+    padding: 10px;
+    background: #3bd268;
+    width: 200px;
+    position: absolute;
+    top:60px;
+    right: 10px;
+}
