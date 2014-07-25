@@ -49,10 +49,24 @@ body {
 header#naglowek{
     background-color: #eb7b0b;
     background-image: url("../images/baner.jpeg");
-    height:150px;
+    height:100px;
     margin-bottom: 5px;
     position: relative;
-    padding:25px;
+    padding: 75px 25px 25px 25px;
+}
+#tytul{
+    font-size: 40px;
+    font-style: normal;
+    font-weight: bold;
+    font-family: Garamond, Bodoni, sans-serif;
+    text-shadow: 5px 5px 5px white, 5px 5px 20px black;
+}
+#podtytul{
+    font-size: 20px;
+    font-style: italic;
+    font-weight: normal;
+    font-family: Helvetica, Univers, Futura, serif;
+    margin-top: 5px;
 }
 nav#menu{
     height:50px;
@@ -146,6 +160,7 @@ div.widget {
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
     border-radius: 5px;
+    box-shadow: 4px 4px 10px gray, 0 0 1px 1px #888 inset;
 }
 div.widget h1 {
     margin: 3px 0px 0px 0px;
@@ -164,17 +179,30 @@ div#social{
     background: none;
 }
 .social{
-    border: 1px solid black;
+    border: 1px solid #eee;
     -webkit-border-radius: 10px;
     -moz-border-radius: 10px;
     border-radius: 10px;
+    box-shadow: 3px 3px 10px black;
 }
 div.shearch-box{
-    height: 25px;
     padding: 10px;
-    background: #3bd268;
-    width: 200px;
+    background: url("../images/65.png");
     position: absolute;
     top:78px;
     right: 20px;
+    border-radius: 10px;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    box-shadow: 3px 3px 10px black, 0 0 1px 1px white inset;
+}
+.shearch{
+    display: inline-block;
+    width:140px;
+    padding:3px;
+}
+.shearch_button{
+    display: inline-block;
+    width:40px;
+    padding:3px;
 }
