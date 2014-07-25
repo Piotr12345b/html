@@ -32,11 +32,14 @@ q{
     display:inline-block;
 }
 html {
-    background: none repeat scroll 0 0 #eeeeee;
+    background-image: url("../images/tlo.jpeg");
+    background-position:top;
+    background-repeat:no-repeat;
+    background-attachment: fixed;
+    background-color: black;
 }
 body {
-    background: none repeat scroll 0 0 #cecece;
-    border: 2px solid #dedede;
+    background: url("../images/50.png") repeat scroll 0 0 transparent;
     border-top:none;
     font-size: 14px;
     margin: 0 auto 10px;
@@ -45,24 +48,33 @@ body {
 }
 header#naglowek{
     background-color: #eb7b0b;
-    height:200px;
+    background-image: url("../images/baner.jpeg");
+    height:150px;
     margin-bottom: 5px;
     position: relative;
+    padding:25px;
 }
 nav#menu{
     height:50px;
     background-color: #eb0b2b;
+    background-image: url("../images/nav.jpeg");
+}
+#menu a{
+    color:white;
+}
+#menu a:hover{
+    color:#213698;
+    text-decoration: none;
 }
 nav ul{
     display: block;
     list-style: none;
-   // overflow: hidden;
+    overflow: hidden;
 }
 nav ul li{
     float: left;
     display: block;
     padding:15px 10px;
-    border-left: 1px solid black;
     font:bold 14px Georgia,sans-serif;
     height: 20px;
     position: relative;
@@ -77,19 +89,19 @@ nav ul li ul{
 nav ul li ul li{
     display:block;
     float: none;
-    background-color: yellow;
-   // height: 30px;
+    background-color: black;
+    background-image: url("../images/nav.jpeg");
     white-space: nowrap;
 }
 div#main {
-    background: none repeat scroll 0 0 #efefef;
+    background: url("../images/85w.png") repeat scroll 0 0 transparent;
     float: left;
     margin: 5px 0;
     padding: 10px;
     width: 660px;
 }
 div#sidebar {
-    background: none repeat scroll 0 0 #eeeeee;
+    background: url("../images/65w.png") repeat scroll 0 0 transparent;
     float: right;
     margin: 5px 0 5px 10px;
     padding: 0px 10px 10px 10px;
@@ -97,25 +109,24 @@ div#sidebar {
     clear: both;
 }
 footer#stopka{
-    background: none repeat scroll 0 0 #dedede;
+    background: url("../images/65w.png") repeat scroll 0 0 transparent;
     clear: both;
     margin-top: 5px;
-    padding: 10px;
+    padding: 0px 10px 10px 10px;
 }
 #stopka #left, #stopka #center, #stopka #right {
-    background: #3bd268;
-    width: 290px;
+    background: transparent;
+    width: 310px;
     margin-right:15px;
     margin-bottom: 5px;
     display: block;
-    padding: 10px;
+    padding: 0px;
     float: left;
 }
 #stopka #right{
     margin: 0;  
 }
 #stopka #bottom{
-    background: #3bd268;
     display: block;
     width: 940px;
     margin-right: 0;
@@ -128,7 +139,7 @@ h1 {
     color: #213698;
 }
 div.widget {
-    background: #dadada;
+    background: url("../images/85w.png") repeat scroll 0 0 transparent;
     border: 1px solid #ccc;
     padding: 5px;
     margin-top: 10px;
@@ -139,6 +150,7 @@ div.widget {
 div.widget h1 {
     margin: 3px 0px 0px 0px;
     text-align: center;
+    border-bottom: 1px dotted #aaa;
 }
 div.widget p {
     margin: 3px;
@@ -146,10 +158,16 @@ div.widget p {
 }
 div#social{
     position: absolute;
-    height: 40px;
-    top:10px;
-    right:10px;
-    background: #dce12f;
+    height: 48px;
+    top:20px;
+    right:20px;
+    background: none;
+}
+.social{
+    border: 1px solid black;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
 }
 div.shearch-box{
     height: 25px;
@@ -157,6 +175,6 @@ div.shearch-box{
     background: #3bd268;
     width: 200px;
     position: absolute;
-    top:60px;
-    right: 10px;
+    top:78px;
+    right: 20px;
 }
