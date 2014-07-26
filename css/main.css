@@ -26,6 +26,26 @@ cite{
     margin-top: 1em;
     display:inline-block;
 }
+input, select, textarea, fieldset, label{
+    display: block;
+    margin:5px;
+}
+button, input[type="submit"], input[type="reset"]{
+    display: inline;
+    margin: 5px;
+    margin-right: 0;
+    padding: 4px;
+}
+label input{
+    display: inline;
+}
+input[type="radio"], input[type="checkbox"]{
+    margin:2px;
+    margin-left: 10px;
+}
+select{
+    padding: 4px;
+}
 q{
     color:#444;
     margin-top: 1em;

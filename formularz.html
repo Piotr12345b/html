@@ -62,9 +62,47 @@
 			</div>
 				
 		</div>
-		<div id="main">Tutaj Zrobię przykładowy formularz<br/>
-			
-                </div>
+            <div id="main">Tutaj Zrobię przykładowy formularz<br/><hr>
+                    <form name="formularz" action="...">
+                        <label>Login: <input type="text" name="pole tekstowe" /></label>
+                        <label> HAsło: <input type="password" name="haslo" /></label>
+                        <label><input type="checkbox" name="checkbox" value="wartość" />checkbox z lbelem</label>
+                        <label><input type="checkbox" name="checkbox" value="wartość" />checkbox z lbelem</label>
+                        <label><input type="checkbox" name="checkbox" value="wartość" />checkbox z lbelem</label>
+                        <label><input type="radio" name="radio" value="wartość" /> radio z labelem</label>
+                        <label><input type="radio" name="radio" value="wartość" /> radio z labelem</label>
+                        <label><input type="radio" name="radio" value="wartość" /> radio z labelem</label>
+                        <select name="select">
+                            <option>1 możliwość</option>
+                            <option>2możliwośc</option>
+                            <optgroup label="1grupa">
+                                <option>sssss</option>
+                                <option>wwwww</option>
+                            </optgroup>
+                        </select>
+                        <textarea name="textarea" cols="10" rows="5">Domyślny tekst</textarea>
+                        <input type="file" name="plik" accept="image/jpeg,image/gif" />
+                        <input type="submit" value="wyślij" />
+                        <input type="reset" value="wyczyść" />
+                        <button type="button" value="tekst">hahahahahah</button>
+                        <fieldset>
+                            <legend>Tytuł</legend>
+                                (Pola formularza)
+                                <select name="select">
+                                    <option>1 możliwość</option>
+                                    <option>2możliwośc</option>
+                                    <optgroup label="1grupa">
+                                       <option>sssss</option>
+                                       <option>wwwww</option>
+                                       </optgroup>
+                                </select>
+                            <textarea name="textarea" cols="10" rows="5">Domyślny tekst</textarea>
+                            <input type="file" name="plik" accept="image/jpeg,image/gif" />
+                            <input type="submit" value="wyślij" />
+                            <input type="reset" value="wyczyść" />
+                        </fieldset>                        
+                    </form>    
+            </div>
 		<footer id="stopka">
                     <div id="left">
                         <div class="widget">
