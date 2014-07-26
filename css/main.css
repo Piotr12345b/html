@@ -1,3 +1,4 @@
+/*--------------------------------Elementy ogólne*/
 *{
     margin: 0;
     padding: 0;
@@ -26,9 +27,23 @@ cite{
     margin-top: 1em;
     display:inline-block;
 }
+code{
+    display: block;
+    margin:5px;
+}
+h1 {
+    font: normal 18px Helvetica;
+    color: #213698;
+}
 input, select, textarea, fieldset, label{
     display: block;
     margin:5px;
+}
+ul, ol{
+    margin:5px 20px;
+}
+table{
+    margin: 5px auto;
 }
 button, input[type="submit"], input[type="reset"]{
     display: inline;
@@ -51,6 +66,7 @@ q{
     margin-top: 1em;
     display:inline-block;
 }
+/*-------------------------------------szkielet strony*/
 html {
     background-image: url("../images/tlo.jpeg");
     background-position:top;
@@ -87,6 +103,13 @@ header#naglowek{
     font-weight: normal;
     font-family: Helvetica, Univers, Futura, serif;
     margin-top: 5px;
+}
+div#social{
+    position: absolute;
+    height: 48px;
+    top:20px;
+    right:20px;
+    background: none;
 }
 nav#menu{
     height:50px;
@@ -133,6 +156,7 @@ div#main {
     margin: 5px 0;
     padding: 10px;
     width: 660px;
+    overflow: hidden
 }
 div#sidebar {
     background: url("../images/65w.png") repeat scroll 0 0 transparent;
@@ -141,12 +165,14 @@ div#sidebar {
     padding: 0px 10px 10px 10px;
     width: 270px;
     clear: both;
+    overflow: hidden;
 }
 footer#stopka{
     background: url("../images/65w.png") repeat scroll 0 0 transparent;
     clear: both;
     margin-top: 5px;
     padding: 0px 10px 10px 10px;
+    overflow: hidden;
 }
 #stopka #left, #stopka #center, #stopka #right {
     background: transparent;
@@ -168,10 +194,7 @@ footer#stopka{
     padding: 10px;
     clear: both;
 }
-h1 {
-    font: normal 18px Helvetica;
-    color: #213698;
-}
+/*----------------------------------------------------------------------klasy*/
 div.widget {
     background: url("../images/85w.png") repeat scroll 0 0 transparent;
     border: 1px solid #ccc;
@@ -190,13 +213,6 @@ div.widget h1 {
 div.widget p {
     margin: 3px;
     margin-top: 1em;
-}
-div#social{
-    position: absolute;
-    height: 48px;
-    top:20px;
-    right:20px;
-    background: none;
 }
 .social{
     border: 1px solid #eee;
@@ -225,4 +241,21 @@ div.shearch-box{
     display: inline-block;
     width:40px;
     padding:3px;
+}
+.thumb, .image {
+    border: 1px solid #333;
+    padding: 1px;
+    background-color: white;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    max-height: 200px;
+    max-width: 200px;
+    margin: 5px auto;
+    display: block;
+    box-shadow: 2px 2px 5px #999;
+}
+.image{
+    max-height: 500px;
+    max-width: 600px;
 }
