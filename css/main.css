@@ -126,7 +126,7 @@ nav#menu{
 nav ul{
     display: block;
     list-style: none;
-    overflow: hidden;
+/*    overflow: hidden;*/
 }
 nav ul li{
     float: left;
@@ -140,8 +140,10 @@ nav ul li ul{
     display:block;
     list-style: none;
     position: absolute;
-    top:50px;
+    top:45px;
     left:-1px;
+    visibility: hidden;
+    margin-left:0px;
 }
 nav ul li ul li{
     display:block;
@@ -149,6 +151,15 @@ nav ul li ul li{
     background-color: black;
     background-image: url("../images/nav.jpeg");
     white-space: nowrap;
+}
+nav ul li ul li ul{
+    display:block;
+    list-style: none;
+    position: absolute;
+    top:-5px;
+    left:100%;
+    visibility: hidden;
+    margin-left:0px;
 }
 div#main {
     background: url("../images/85w.png") repeat scroll 0 0 transparent;
