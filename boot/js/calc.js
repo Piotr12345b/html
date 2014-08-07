@@ -3,15 +3,65 @@ var display = document.querySelector('#inputSuccess1');
 
 var result=0;//wynik kalkulatora
 var tmp=0;//zmianna pomocnicza do działań
+var tmp_old=null;//ostatnia zmienna pomocnicza
+var przecinek=0;//liczba cyfr po przecinku
 var memory=0;//pamięć
+var dzialanie=0;//przechowuje rodzaj działania matematycznego jakie ma zostać wykonane po wciśnięciu '='; 0 - brak działania
+var dzialanie_old = null;//przechowuje poprzednie działanie ---------- ma być statyczną zmienną w policz!
+
+function pokaz(){//czyści tmp, wyświetla 0 na wyświetlaczu
+    tmp_old=tmp;
+    tmp=null;
+    przecinek=0;
+    display.value = 0;
+}
 
 function write(cyfra){//odpowiada za modyfikację tmp
-    tmp=10*tmp + cyfra;
+      
+    if(!przecinek)tmp=10*tmp + cyfra;
+    else {
+        for(i=0;i<przecinek;i++) tmp*=10;
+        tmp+=cyfra;
+        for(i=0;i<przecinek;i++) tmp/=10;
+        przecinek++;
+    }
+    
+    if(dzialanie===0)result=tmp;
     display.value = tmp;
 }
+function policz(){
+    if((dzialanie===0)&&(tmp===null))//obsługa wielokrotnego powtarzania tego samego działania np. po wprowadzeniu "8+2==" otrzymamy 12, bo 8+2+2=12
+    {
+        tmp=tmp_old;
+        dzialanie=dzialanie_old;
+    }
+    
+    if(tmp===null)tmp=result;//obsługa mnożeniaprzez samą siebie itp. np. po wprowadzeniu "8+=" wynik będzie 16
+     
+    switch(dzialanie){//rozróżnianie działań
+        case 1:
+            result/=tmp;
+            break;
+        case 2:
+            result*=tmp;
+            break;
+        case 3:
+            result-=tmp;
+            break;
+        case 4:
+            result+=tmp;
+            break;        
+    }
+    pokaz();
+    display.value = result;
+    
+    dzialanie_old = dzialanie;
+    dzialanie=0;
+}
+
 //--------------------------------Zdarzenia przycisków
 buttons[0].onclick = function(){
-    //=    
+    policz(); 
 };
 buttons[1].onclick = function(){
     write(7);
@@ -23,7 +73,8 @@ buttons[3].onclick = function(){
     write(9);
 };
 buttons[4].onclick = function(){
-    //    /
+    dzialanie=1;//dzielenie
+    pokaz();
 };
 buttons[5].onclick = function(){
     write(4);
@@ -35,7 +86,8 @@ buttons[7].onclick = function(){
     write(6);
 };
 buttons[8].onclick = function(){
-    // *
+    dzialanie=2;//mnożenie
+    pokaz();
 };
 buttons[9].onclick = function(){
     write(1);
@@ -47,16 +99,63 @@ buttons[11].onclick = function(){
     write(3);
 };
 buttons[12].onclick = function(){
-    //-
+    dzialanie=3;//odejmowanie
+    pokaz();
 };
 buttons[13].onclick = function(){
     write(0);
 };
 buttons[14].onclick = function(){
-    // ,
+    przecinek++;
 };
 buttons[15].onclick = function(){
-    // +
+    dzialanie=4;//dodawanie
+    pokaz();
+};
+buttons[16].onclick = function(){
+    tmp=memory;//MR
+    display.value = tmp;
+};
+buttons[17].onclick = function(){
+    memory=tmp;//MS
+    pokaz();
+};
+buttons[18].onclick = function(){
+    memory+=tmp;//M+
+    display.value = tmp;
+};
+buttons[19].onclick = function(){
+    memory-=tmp;//M-
+    display.value = tmp;
+};
+buttons[20].onclick = function(){//cofnij
+    //====================================================================TODO
+};
+buttons[21].onclick = function(){//CE
+    tmp=0;
+    result=0;
+    memory=0;
+    dzialanie=0;
+    dzialanie_old=0;
+    tmp_old=0;
+    display.value = 0;
+};
+buttons[22].onclick = function(){//C
+    if(dzialanie===0)result=0;
+    tmp=0;
+    display.value = 0; 
+};
+buttons[23].onclick = function(){// +/-
+    if(dzialanie===0)
+    {
+        result*= -1;
+        display.value = result;
+    }
+     else
+     {
+         tmp*= -1;
+         display.value=tmp;
+     } 
 };
 
 //--------------------------Obsługa klawiatury
@@ -68,6 +167,7 @@ function klawisz(e) {
 document.onkeydown = function(e) {
     
     switch(klawisz(e)) {
+        //--------Cyfry
     case 48:
     case 96:
         write(0);
@@ -117,9 +217,34 @@ document.onkeydown = function(e) {
     case 105:
         write(9);
         break;
+        
+        //----------Dzialania podstawowe
+    case 111:
+        dzialanie=1;//dzielenie
+        pokaz();
+        break;  
+    case 106:
+        dzialanie=2;//mnożenie
+        pokaz();
+        break;
+    case 109:
+        dzialanie=3;//odejmowanie
+        pokaz();
+        break;
+    case 107:
+        dzialanie=4;//dodawanie
+        pokaz();
+        break;
+    case 13:
+        policz();//         =
+        break;
+        
+        case 108:
+            przecinek++;
+            break;
    
     } 
-    //alert(klawisz(e));
+    //alert("Kod wciśniętego klawisza, to: "+klawisz(e));
     e.preventDefault();
 }
 
