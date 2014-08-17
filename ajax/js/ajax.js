@@ -18,3 +18,7 @@ $( "#post" ).click(function() {
             $('#post_box').append(data);
         });   
     });  
+
+$( "#load" ).click(function() {
+    $("#load_box").load("test.html .row");
+});  
