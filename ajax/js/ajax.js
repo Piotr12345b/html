@@ -22,3 +22,9 @@ $( "#post" ).click(function() {
 $( "#load" ).click(function() {
     $("#load_box").load("test.html .row");
 });  
+
+$( "#json" ).click(function() {
+    $.getJSON("dane.json") .done(function( data ) {
+        $( "<p class='alert alert-danger'>" ).text(data.name) .appendTo( "#json_box" );
+    });  
+});
