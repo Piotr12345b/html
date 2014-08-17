@@ -28,3 +28,7 @@ $( "#json" ).click(function() {
         $( "<p class='alert alert-danger'>" ).text(data.name) .appendTo( "#json_box" );
     });  
 });
+
+$( "#script" ).click(function() {
+    $.getScript("js/test.js");
+}); 
