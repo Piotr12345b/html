@@ -10,4 +10,11 @@ $( "#get2" ).click(function() {
         .done(function( data ) {
             $('#get2_box').append(data);
         });   
-    });    
+    });  
+    
+$( "#post" ).click(function() {
+    $.post( "post.php", { name: "Molibdenowy Mateusz", time: "H : i : s" } )
+        .done(function( data ) {
+            $('#post_box').append(data);
+        });   
+    });  
