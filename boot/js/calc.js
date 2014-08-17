@@ -157,6 +157,30 @@ buttons[23].onclick = function(){// +/-
          display.value=tmp;
      } 
 };
+buttons[24].onclick = function(){//sqrt
+    
+};
+buttons[25].onclick = function(){//procent
+    
+};
+buttons[26].onclick = function(){//odwrotnosc
+    
+};
+buttons[27].onclick = function(){//silnia
+    
+};
+buttons[28].onclick = function(){//pierwiasrek stopnia
+    
+};
+buttons[29].onclick = function(){//potega
+    
+};
+buttons[30].onclick = function(){//10 do x
+    
+};
+buttons[31].onclick = function(){//kwadrat
+    
+};
 
 //--------------------------Obsługa klawiatury
 function klawisz(e) {
