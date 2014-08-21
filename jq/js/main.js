@@ -24,6 +24,26 @@ $(window).load(function() {
             'color': 'red'
         });
     });
+    
+    $('#html').click(function(){
+        $('#html_box').html('<h5> brawo Włąsnie tak się zmienia zawartośc html !</h5>');
+    });
+    
+    $('#text').click(function(){
+        $('#html_box').text('<h5> brawo Włąsnie tak się zmienia text elementu !</h5>');
+    });
+
+    $('#clone').click(function(){
+        $('#crr').clone().appendTo( "#crr" );
+    });
+    
+    $('#remove').click(function(){
+        $('#crr').remove();
+    });
+    
+    $('#replace').click(function(){
+        $('#crr').replaceWith( "<h2>Nowa zawartośc !</h2>" );
+    });
 
 });
 
