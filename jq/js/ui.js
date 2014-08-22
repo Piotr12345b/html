@@ -107,5 +107,26 @@ $(function() {
     $( document ).tooltip();
      
     $( "#spinner" ).spinner({min: 0, max:10});
+    
+    //interakcje
+    
+    $( "#draggable" ).draggable();
+    $( "#draggable1" ).draggable({ "axis": "x"});    
+    $( "#draggable2" ).draggable({ containment: "parent" });
+    $( "#draggable3" ).draggable({ grid: [ 50, 20 ] });
+    $( ".dragable" ).draggable({ stack: ".dragable"});
+
+    $( "#droppable" ).droppable({
+        drop: function() {
+        alert( "dropped" );
+        },
+        accept: ".dragable"
+    });
+    
+    $( "#resizable" ).resizable({ aspectRatio: true });
+    
+    $( "#selectable" ).selectable();
+    
+    $("#sortable").sortable({ axis: "y" });
 });
 
