@@ -6,6 +6,7 @@
     <meta charset="UTF-8">
     <!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <link rel="stylesheet" href="css/jquery-ui.css">
   </head>
   
   <body>
@@ -75,14 +76,135 @@
             <div class="col-xs-6 l" >Przykładowy tekst, nie wiem co tu wpisać ale to nie ma znaczenia, gdyż zaraz ten tekst zniknie!</div>
         </div>
                
-        <p class="alert alert-danger alert-dismissable">Nie zamieściłem tu wszystkich efektów, lecz dużą część, właściwie wszystkich używa się w podobny sposób ;)</p>
+        <p class="alert alert-danger">Nie zamieściłem tu wszystkich efektów, lecz dużą część, właściwie wszystkich używa się w podobny sposób ;)</p>
+    
+        <h4>Widgety</h4>
+        
+        <div id="accordion">
+            <h3>Section 1</h3>
+            <div>
+                <p>Mauris mauris ante, blandit et, ultrices a, suscipit eget.
+                   Integer ut neque. Vivamus nisi metus, molestie vel, gravida in,
+                   condimentum sit amet, nunc. Nam a nibh. Donec suscipit eros.
+                   Nam mi. Proin viverra leo ut odio.</p>
+            </div>
+            <h3>Section 2</h3>
+            <div>
+                <p>Sed non urna. Phasellus eu ligula. Vestibulum sit amet purus.
+                   Vivamus hendrerit, dolor aliquet laoreet, mauris turpis velit,
+                   faucibus interdum tellus libero ac justo.</p>
+            </div>
+            <h3>Section 3</h3>
+            <div>
+                <p>Nam enim risus, molestie et, porta ac, aliquam ac, risus.
+                   Quisque lobortis.Phasellus pellentesque purus in massa.</p>
+                    <ul>
+                        <li>List item one</li>
+                        <li>List item two</li>
+                        <li>List item three</li>
+                    </ul>
+            </div>
+        </div>
+        
+        <label for="autocomplete">Select a programming language: </label>
+        <input id="autocomplete">
+        
+        <form>
+<fieldset>
+<legend>Favorite jQuery Project</legend>
+<div id="radio">
+<input type="radio" id="sizzle" name="project">
+<label for="sizzle">Sizzle</label>
+<input type="radio" id="qunit" name="project" checked="checked">
+<label for="qunit">QUnit</label>
+<input type="radio" id="color" name="project">
+<label for="color">Color</label>
+</div>
+</fieldset>
+</form>
+        <button id="but">Button label</button>
+        
+        <p class="alert alert-danger">coś mi nie działają te buttony chyba wina bootstarpa </p>
+        
+        <div id="datepicker"></div>
+        <div id="datepicker2"></div>
+        <input id="actualDate">
+        
+        <button id="opener">open the dialog</button>
+        <div id="dialog" title="Dialog Title">I'm a dialog</div>
+        
+        <div class="row">
+        <ul id="menu" class="col-xs-3">
+            <li>Item 1</li>
+            <li><span class="ui-icon ui-icon-disk"></span>Item 2</li>
+            <li>Item 3
+                <ul>
+                    <li>Item 3-1</li>
+                    <li>Item 3-2</li>
+                    <li>Item 3-3</li>
+                    <li>Item 3-4</li>
+                    <li>Item 3-5</li>
+                </ul>
+            </li>
+            <li>Item 4</li>
+            <li>-</li>
+            <li>Item 5</li>
+        </ul>
+        </div>
+        
+        <div id="progressbar"></div>
+        
+        <label for="files">Select a file:</label>
+            <select name="files" id="files">
+                <optgroup label="Scripts">
+                    <option value="jquery">jQuery.js</option>
+                    <option value="jqueryui">ui.jQuery.js</option>
+                </optgroup>
+                <optgroup label="Other files">
+                    <option value="somefile">Some unknown file</option>
+                    <option value="someotherfile">Some other file</option>
+                </optgroup>
+            </select>
+        
+        <div id="slider"></div>
+        
+        <div id="tabs">
+            <ul>
+                <li><a href="#fragment-1"><span>One</span></a></li>
+                <li><a href="#fragment-2"><span>Two</span></a></li>
+                <li><a href="#fragment-3"><span>Three</span></a></li>
+            </ul>
+            <div id="fragment-1">
+                <p>First tab is active by default:</p>
+                <pre><code>$( "#tabs" ).tabs(); </code></pre>
+            </div>
+            <div id="fragment-2">
+                Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+                Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+            </div>
+            <div id="fragment-3">
+Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+            </div>
+        </div>
+        
+        <p>
+            <a href="#" title="Anchor description">Anchor text</a>
+            <input title="Input help">
+        </p>
+        
+        <input id="spinner">
+        
     </div>
     
     
     <script src="http://code.jquery.com/jquery.js"></script>
     <script src="js/jquery-ui.js"></script>
+    <script src="js/jquery.ui.datepicker-pl.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/ui.js"></script>
+    
   </body>
   
 </html>

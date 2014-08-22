@@ -56,5 +56,56 @@ $(function() {
         $("div.l").effect("shake",{times:20, distance: 30}, 2000);
     });
     
+    //widgety
+    
+    $( "#accordion" ).accordion({ icons: { "header": "ui-icon-plusthick", "activeHeader": "ui-icon-minusthick" } });
+    
+    var tags = [ "c++","c#", "java", "php", "coldfusion", "javascript", "asp", "ruby" ];
+    $( "#autocomplete" ).autocomplete({
+        source: function( request, response ) {
+            var matcher = new RegExp( "^" + $.ui.autocomplete.escapeRegex( request.term ), "i" );
+            response( $.grep( tags, function( item ){
+                return matcher.test( item );
+            }) );
+        }
+    });
+    
+    $( "#radio" ).buttonset();
+    $("#but").button();  
+    
+    $("#datepicker").datepicker({
+        beforeShowDay: $.datepicker.noWeekends,
+        altField: "#actualDate",
+        defaultDate: +5,
+        minDate: new Date(2014,9-1,1),
+        numberOfMonths: [2,4],
+        showWeek: true,
+        onSelect: function(date) {
+            alert(date);
+            $( "#datepicker" ).datepicker( "setDate", "10.12.2014" );
+        }
+    });
+    
+    $( "#dialog" ).dialog({ autoOpen: false, draggable: false , hide: { effect: "explode", duration: 1000 }});
+    $( "#opener" ).click(function() {
+        $( "#dialog" ).dialog( "open" );
+    });
+   
+    $( "#menu" ).menu();
+   
+    $( "#progressbar" ).progressbar({
+        value: false,
+        max: 100
+    });
+    
+    $( "#files" ).selectmenu({icons: { button: "ui-icon-disk" }});
+    
+    $( "#slider" ).slider({ max: 50, min: 10, orientation: "horizontal", step: 5,  values: [ 10, 25 ]  });
+    
+    $( "#tabs" ).tabs();
+    
+    $( document ).tooltip();
+     
+    $( "#spinner" ).spinner({min: 0, max:10});
 });
 
