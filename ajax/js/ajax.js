@@ -9,7 +9,10 @@ $( "#get2" ).click(function() {
     $.get( "test.php", { imie: "Bożydar", data: "d.m.y" } )
         .done(function( data ) {
             $('#get2_box').append(data);
-        });   
+        })
+        .fail(function() {
+            alert( "Wystąpił problem z połaczeniem, spróbuj ponownie za chwilę" );
+        });  
     });  
     
 $( "#post" ).click(function() {
